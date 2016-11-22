@@ -1,5 +1,12 @@
 (($ => {
-   $(() => {
+  $(() => {
+    $.prototype.fullscreen = function()
+    {
+      var $e = $(this);
+      if(!$e.hasClass('modal-fullscreen')) return;
+      bind($e);
+    }
+    
     function cssn($e, props) {
       let sum = 0;
       props.forEach(p => {
@@ -31,15 +38,19 @@
       const bh = wh - $h.outerHeight() - $f.outerHeight() - ($b.outerHeight()-$b.height()) - d.height;
       $b.height(bh);
     }
-    $('.modal-fullscreen').on('show.bs.modal', e => {
-      const $e = $(e.currentTarget).css('visibility', 'hidden');
-    });
-    $('.modal-fullscreen').on('shown.bs.modal', e => {
-      calc($(e.currentTarget));
-      const $e = $(e.currentTarget).css('visibility', 'visible');    
-    });
+    function bind($e)
+    {
+       $e.on('show.bs.modal', e => {
+        const $e = $(e.currentTarget).css('visibility', 'hidden');
+       });
+       $e.on('shown.bs.modal', e => {
+        calc($(e.currentTarget));
+        const $e = $(e.currentTarget).css('visibility', 'visible');   
+       });
+    }
     $(window).resize(() => {
       calc($('.modal.modal-fullscreen.in'));
     });
+    bind($('.modal-fullscreen'));
   });
 }))(jQuery);

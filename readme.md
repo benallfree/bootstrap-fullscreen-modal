@@ -23,6 +23,33 @@ Then:
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-modal-fullscreen/1.0.0/bootstrap-modal-fullscreen.min.js"></script>
 
 
+## Usage
+
+In most cases, you need only add `.modal-fullscreen` to your modal dialog:
+
+
+    <div class="modal fade modal-fullscreen" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+          </div>
+          <div class="modal-body">
+            Some great content
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+For special cases, you may need to enable full screen viewing programatically. In that case, add `.modal-fullscreen` to your dialog as usual, then call:
+
+    $('#myModal').fullscreen();
+
 ## Installation
 
     npm require --save-dev bootstrap-modal-fullscreen
