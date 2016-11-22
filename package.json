@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-modal-fullscreen",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Full screen modal dialogs for Bootstrap 3 & 4",
   "main": "src/index.js",
   "scripts": {

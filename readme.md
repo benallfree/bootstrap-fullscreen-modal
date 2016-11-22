@@ -12,6 +12,8 @@ Features:
 
 See the [Codepen demo](http://codepen.io/benallfree/pen/vyxqGM).
 
+    npm require --save-dev bootstrap-modal-fullscreen
+
 This plugin requires Bootstrap 3 or 4 and jQuery
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" />
@@ -20,7 +22,7 @@ This plugin requires Bootstrap 3 or 4 and jQuery
 
 Then:
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-modal-fullscreen/1.0.0/bootstrap-modal-fullscreen.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bootstrap-modal-fullscreen/1.0.3/bootstrap-modal-fullscreen.min.js"></script>
 
 
 ## Usage
@@ -50,10 +52,6 @@ For special cases, you may need to enable full screen viewing programatically. I
 
     $('#myModal').fullscreen();
 
-## Installation
-
-    npm require --save-dev bootstrap-modal-fullscreen
-
 ## Building
 
-      gulp
+gulp
