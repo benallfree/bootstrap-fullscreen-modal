@@ -2,6 +2,12 @@
 
 Ever wanted that modal dialog to take up the whole screen? This plugin does it. It even supports a scrollable body region so your modal footer stays where you expect it to.
 
+Features:
+
+* Full screen modal dialog
+* Scrollable body region
+* Resizes with window
+
 ## Quickstart
 
 See the [Codepen demo](http://codepen.io/benallfree/pen/vyxqGM).
