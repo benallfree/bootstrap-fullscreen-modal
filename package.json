@@ -1,0 +1,35 @@
+{
+  "name": "bootstrap-modal-fullscreen",
+  "version": "1.0.0",
+  "description": "Full screen modal dialogs for Bootstrap 3 & 4",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/benallfree/bootstrap-modal-fullscreen.git"
+  },
+  "keywords": [
+    "bootstrap",
+    "modal",
+    "full",
+    "screen",
+    "fullscreen"
+  ],
+  "author": "Ben Allfree",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/benallfree/bootstrap-modal-fullscreen/issues"
+  },
+  "homepage": "https://github.com/benallfree/bootstrap-modal-fullscreen#readme",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.18.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.0.0",
+    "gulp-webpack": "^1.5.0",
+    "pump": "^1.0.1"
+  }
+}
