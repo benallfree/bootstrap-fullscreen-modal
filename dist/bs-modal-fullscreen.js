@@ -2,10 +2,19 @@
 
 (function ($) {
   $(function () {
+    $.prototype.fullscreen = function () {
+      var $e = $(this);
+      if (!$e.hasClass('modal-fullscreen')) return;
+      bind($e);
+    };
+
     function cssn($e, props) {
       var sum = 0;
       props.forEach(function (p) {
-        sum += parseInt($e.css(p).match(/\d+/)[0]);
+        var att = $e.css(p);
+        if (att) {
+          sum += parseInt(att.match(/\d+/)[0]);
+        }
       });
       return sum;
     }
@@ -31,15 +40,18 @@
       var bh = wh - $h.outerHeight() - $f.outerHeight() - ($b.outerHeight() - $b.height()) - d.height;
       $b.height(bh);
     }
-    $('.modal-fullscreen').on('show.bs.modal', function (e) {
-      var $e = $(e.currentTarget).css('visibility', 'hidden');
-    });
-    $('.modal-fullscreen').on('shown.bs.modal', function (e) {
-      calc($(e.currentTarget));
-      var $e = $(e.currentTarget).css('visibility', 'visible');
-    });
+    function bind($e) {
+      $e.on('show.bs.modal', function (e) {
+        var $e = $(e.currentTarget).css('visibility', 'hidden');
+      });
+      $e.on('shown.bs.modal', function (e) {
+        calc($(e.currentTarget));
+        var $e = $(e.currentTarget).css('visibility', 'visible');
+      });
+    }
     $(window).resize(function () {
       calc($('.modal.modal-fullscreen.in'));
     });
+    bind($('.modal-fullscreen'));
   });
 })(jQuery);
