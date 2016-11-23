@@ -10,7 +10,11 @@
     function cssn($e, props) {
       let sum = 0;
       props.forEach(p => {
-        sum += parseInt($e.css(p).match(/\d+/)[0]);
+        let att = $e.css(p);
+        if(att)
+        {
+          sum += parseInt(att.match(/\d+/)[0]);
+        }
       });
       return sum;
     }
