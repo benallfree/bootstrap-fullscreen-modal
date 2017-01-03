@@ -1,4 +1,4 @@
-(($ => {
+(($) => {
   $(() => {
     $.prototype.fullscreen = function()
     {
@@ -57,4 +57,4 @@
     });
     bind($('.modal-fullscreen'));
   });
-}))(jQuery);
+})(jQuery);
