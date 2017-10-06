@@ -12,7 +12,7 @@ Features:
 
 See the [Codepen demo](http://codepen.io/benallfree/pen/vyxqGM).
 
-    npm require --save-dev bootstrap-modal-fullscreen
+    npm install --save-dev bootstrap-modal-fullscreen
 
 This plugin requires Bootstrap 3 or 4 and jQuery
 
